@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     public float speed;
 
+    public GameObject bullet;
+
     private Vector2 moveVelocity;
 
 
@@ -17,7 +19,14 @@ public class Player : MonoBehaviour
         myBody = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        Rotation();
 
+        //shoot function
+        if (Input.GetMouseButton(0))
+            Instantiate(bullet, transform.position, Quaternion.identity);
+    }
 
     void Start()
     {
@@ -30,7 +39,14 @@ public class Player : MonoBehaviour
         Movement(); 
         
     }
-
+    void Rotation()
+    {
+        Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 10 * Time.deltaTime);
+     }
+     
      void Movement()
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxis("Vertical"));
