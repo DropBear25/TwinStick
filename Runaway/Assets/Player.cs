@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 
     private Rigidbody2D myBody;
+    private Animator FireAnim;
 
     public float speed;
 
@@ -13,10 +14,17 @@ public class Player : MonoBehaviour
 
     private Vector2 moveVelocity;
 
+    public ControlJoystick movejoystick;
+    public ControlJoystick shootJoystick;
+
+    [HideInInspector]
+    public bool canShoot;
 
     public void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
+        FireAnim = transform.GetChild(0).GetComponent<Animator>();
+      
     }
 
     private void Update()
@@ -24,7 +32,7 @@ public class Player : MonoBehaviour
         Rotation();
 
         //shoot function
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && canShoot)
             Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
@@ -43,14 +51,27 @@ public class Player : MonoBehaviour
     {
         Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
+        if (shootJoystick.InputDir != Vector3.zero)
+            angle = Mathf.Atan2(shootJoystick.InputDir.y, shootJoystick.InputDir.x) * Mathf.Rad2Deg + 90;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 10 * Time.deltaTime);
      }
      
      void Movement()
     {
+        
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxis("Vertical"));
+
+        if (movejoystick.InputDir != Vector3.zero)
+            moveInput = movejoystick.InputDir;
+
         moveVelocity = moveInput.normalized * speed;
         myBody.MovePosition(myBody.position + moveVelocity * Time.fixedDeltaTime);
+
+        if (moveVelocity == Vector2.zero)
+            FireAnim.SetBool("Fire", false);
+
+        else
+            FireAnim.SetBool("Fire", true);
     }
 }
