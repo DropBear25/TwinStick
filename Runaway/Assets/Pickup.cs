@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
 
+    private List<Key.KeyType> keyList;
 
     private Inventory inventory;
     public GameObject itemButton;
@@ -13,25 +14,57 @@ public class Pickup : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
+    public void Addkey(Key.KeyType keyType)
+    {
+        keyList.Add(keyType);
+    }
 
-    void OnTriggerEnter2D(Collider2D other) {
+    public bool Containskey(Key.KeyType keyType)
+    {
+        return keyList.Contains(keyType);
+    }
 
-        if (other.CompareTag("Player")){
+    public void RemoveKey(Key.KeyType keyType)
+    {
+        keyList.Remove(keyType);
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
 
-          for (int i = 0; i < inventory.slots.Length; i++)
+        if (other.CompareTag("Player"))
+        {
+
+            for (int i = 0; i < inventory.slots.Length; i++)
             {
-                if(inventory.isFull[i] == false)
+                if (inventory.isFull[i] == false)
                 {
                     //add item
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject);
-                    Debug.Log("Pickedup");
                     break;
                 }
             }
+        }
+        Key key = other.GetComponent<Key>();
+        if (key != null)
+        {
+            Addkey(key.GetKeyType());
+            Destroy(key.gameObject);
 
         }
 
-    }
+        KeyDoor keyDoor = other.GetComponent<KeyDoor>();
+        if (keyDoor != null)
+        {
+            if (Containskey(keyDoor.GetKeyType()))
+            {
+                 RemoveKey(keyDoor.GetKeyType());
+                keyDoor.OpenDoor();
+
+
+            }
+        }
+    }        
+    
 }
