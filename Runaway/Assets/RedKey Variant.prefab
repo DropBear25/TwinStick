@@ -29,19 +29,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 0
---- !u!114 &998432597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6453722366775859834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313fd5af0b612fe4282b0c4f18d2351d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemButton: {fileID: 6588422393174773146, guid: 85985b97c9750d043ac2d94b8ede0bbd, type: 3}
 --- !u!1001 &5527875437306825479
 PrefabInstance:
   m_ObjectHideFlags: 0

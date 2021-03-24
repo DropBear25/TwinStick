@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2918717053681505684}
   - component: {fileID: 7887524854949125049}
   - component: {fileID: 8214601797212252206}
-  - component: {fileID: -3946509290461313883}
   m_Layer: 5
   m_Name: RedKeyButton
   m_TagString: Untagged
@@ -76,16 +75,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-3946509290461313883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6588422393174773146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfde8851dfd008940add5036b2636a96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 6453722366775859834, guid: a098ee55250760b4a879f87182275bb0, type: 3}
