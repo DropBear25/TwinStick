@@ -341,8 +341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 351, y: 64}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 324.4, y: 66}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &480480380
 MonoBehaviour:
@@ -724,8 +724,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 588, y: 61}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 567.3, y: 62.6}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &525749387
 MonoBehaviour:
@@ -889,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd5dfbdf7667b7942b0e97587f1f161f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToLive: 0.6
   speed: 5
   bullet: {fileID: 4243964516149745509, guid: 5e557fe313239404dbe800f76a71dc53, type: 3}
   movejoystick: {fileID: 1522279259}
@@ -1073,8 +1074,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 471, y: 62}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 445.1, y: 61.6}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &713340318
 MonoBehaviour:
@@ -2092,8 +2093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 229, y: 63}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 204, y: 68.2}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1493719410
 MonoBehaviour:
@@ -3006,7 +3007,7 @@ GameObject:
   - component: {fileID: 2074497843}
   - component: {fileID: 2074497842}
   - component: {fileID: 2074497844}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

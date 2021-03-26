@@ -13,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bullets
+  - Player
+  - Enemy
+  - Obstacle
+  - EnemyMovementCollider
+  - PlayerMovementCollider
   - 
   - 
   - 

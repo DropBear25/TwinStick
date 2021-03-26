@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D myBody;
     private Animator FireAnim;
+    public float timeToLive;
 
     public float speed;
 
@@ -20,11 +21,14 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool canShoot;
 
+    public static int AmmoCapacity { get; internal set; }
+
     public void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
         FireAnim = transform.GetChild(0).GetComponent<Animator>();
-      
+     //   StartCoroutine(DestroyBullet());
+
     }
 
     private void Update()
@@ -33,8 +37,23 @@ public class Player : MonoBehaviour
 
         //shoot function
         if (Input.GetMouseButton(0) && canShoot)
-            Instantiate(bullet, transform.position, Quaternion.identity);
+
+            shoot();
+         
     }
+
+    private void shoot()
+    {
+        Instantiate(bullet, transform.position, Quaternion.identity);
+     //   StartCoroutine(shotCooldown());
+    }
+
+   // IEnumerator shotCooldown()
+   // {
+   //     yield return new WaitForSeconds(timeBetweenShots);
+   //     canShoot = true;
+
+ //   }
 
     void Start()
     {
@@ -47,6 +66,7 @@ public class Player : MonoBehaviour
         Movement(); 
         
     }
+ 
     void Rotation()
     {
         Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

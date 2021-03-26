@@ -50,7 +50,7 @@ public class Pickup : MonoBehaviour
         if (key != null)
         {
             Addkey(key.GetKeyType());
-           
+            Destroy(key.gameObject);
 
         }
 
