@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     {
         myBody = GetComponent<Rigidbody2D>();
         FireAnim = transform.GetChild(0).GetComponent<Animator>();
-     //   StartCoroutine(DestroyBullet());
+        transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = currentWeapon.currentWeaponSPR;
 
     }
 

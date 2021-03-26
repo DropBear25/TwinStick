@@ -15,13 +15,15 @@ public class Bullet : MonoBehaviour
     {
         dir = GameObject.Find("Dir").transform.position;
         transform.position = GameObject.Find("FirePoint").transform.position;
+        Destroy(gameObject, 1f);
+        transform.eulerAngles = new Vector3(0, 0, GameObject.Find("Player").transform.eulerAngles.z);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, dir, speed * Time.deltaTime);
-        Destroy(gameObject, 1f);
+        
     }
 
   
