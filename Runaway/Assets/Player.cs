@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public Weapon currentWeapon;
     private Rigidbody2D myBody;
     private Animator FireAnim;
-    public float timeToLive;
+  
 
     public float speed;
+
+
+    private float nextTimeOfFire = 0f;
 
     public GameObject bullet;
 
@@ -21,7 +24,7 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool canShoot;
 
-    public static int AmmoCapacity { get; internal set; }
+   // public static int AmmoCapacity { get; internal set; }
 
     public void Awake()
     {
@@ -36,7 +39,7 @@ public class Player : MonoBehaviour
         Rotation();
 
         //shoot function
-        if (Input.GetMouseButton(0) && canShoot)
+        if (Input.GetMouseButton(0) && canShoot && AmmoText.ammoAmount > 0)
 
             shoot();
          
@@ -44,16 +47,19 @@ public class Player : MonoBehaviour
 
     private void shoot()
     {
-        Instantiate(bullet, transform.position, Quaternion.identity);
-     //   StartCoroutine(shotCooldown());
+        //Instantiate(bullet, transform.position, Quaternion.identity);
+
+        if (Time.time >= nextTimeOfFire)
+        {
+            AmmoText.ammoAmount -= 1;
+            currentWeapon.Shoot();
+            nextTimeOfFire = Time.time + 1 / currentWeapon.fireRate;
+
+
+        }
     }
 
-   // IEnumerator shotCooldown()
-   // {
-   //     yield return new WaitForSeconds(timeBetweenShots);
-   //     canShoot = true;
-
- //   }
+   
 
     void Start()
     {
