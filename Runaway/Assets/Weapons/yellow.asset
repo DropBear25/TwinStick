@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65730cec189b6b84c87db4ec68e7755f, type: 3}
-  m_Name: BasicWeaponBlue
+  m_Name: yellow
   m_EditorClassIdentifier: 
-  currentWeaponSPR: {fileID: 5788958475570477035, guid: eeac123894a68534590c3197728fced1, type: 3}
+  currentWeaponSPR: {fileID: 21300000, guid: c2fcf69ab9813504c973c921dc85789e, type: 3}
   bulletPrefab: {fileID: 3283276857113560056, guid: 6a1edfced0e0bae45ab5056410e31546, type: 3}
   fireRate: 3
   damage: 20

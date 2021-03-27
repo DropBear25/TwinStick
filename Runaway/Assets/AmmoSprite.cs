@@ -5,20 +5,23 @@ using UnityEngine;
 public class AmmoSprite : MonoBehaviour
 {
 
-    private Transform player;
+    public Transform player;
     public GameObject effect;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+   //  player = GameObject.FindGameObjectWithTag("RedGun").transform;
+
+
     }
 
 
 
     public void Use(){
-       
-        //Instantiate(effect, player.position, Quaternion.identity);
-        AmmoText.ammoAmount += 6;
+
+        // if statement == gun tag then add bullets 
+  //changed from ammotext to weapon script
+        Weapon.ammoAmount += 6;
         Destroy(gameObject);
 
     }

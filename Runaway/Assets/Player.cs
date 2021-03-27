@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private Animator FireAnim;
   
 
+   
+
     public float speed;
 
 
@@ -21,6 +23,9 @@ public class Player : MonoBehaviour
     public ControlJoystick movejoystick;
     public ControlJoystick shootJoystick;
 
+
+    
+
     [HideInInspector]
     public bool canShoot;
 
@@ -28,6 +33,7 @@ public class Player : MonoBehaviour
 
     public void Awake()
     {
+
         myBody = GetComponent<Rigidbody2D>();
         FireAnim = transform.GetChild(0).GetComponent<Animator>();
         transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = currentWeapon.currentWeaponSPR;
@@ -38,20 +44,22 @@ public class Player : MonoBehaviour
     {
         Rotation();
 
-        //shoot function
-        if (Input.GetMouseButton(0) && canShoot && AmmoText.ammoAmount > 0)
+
+        //shoot function //ammo text changed to weapon 
+        if (Input.GetMouseButton(0) && canShoot && Weapon.ammoAmount > 0) 
 
             shoot();
          
     }
 
+
+    
     private void shoot()
     {
-        //Instantiate(bullet, transform.position, Quaternion.identity);
 
         if (Time.time >= nextTimeOfFire)
-        {
-            AmmoText.ammoAmount -= 1;
+        {       //ammo changed to weapon
+            Weapon.ammoAmount -= 1;
             currentWeapon.Shoot();
             nextTimeOfFire = Time.time + 1 / currentWeapon.fireRate;
 

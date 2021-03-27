@@ -10,35 +10,34 @@ public class WeaponChange : MonoBehaviour
 
     void Start()
     {
-    //    player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void OnTriggerEnter2D(Collider2D target)
+
+
+
+
+    public void Use()
     {
-        if (target.tag == "Player")
-        {
 
 
-            player.GetComponent<Player>().currentWeapon = weapon;
-            player.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSPR;
 
 
-        }
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player.GetComponent<Player>().currentWeapon = weapon;
+        player.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSPR;
+        Destroy(gameObject);
 
 
     }
 
-        public void Use()
-    {
-
-      
 
 
+}
 
-        }
 
 
-        }
      
        // Instantiate(effect, player.position, Quaternion.identity);
        

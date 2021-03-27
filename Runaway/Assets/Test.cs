@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private Transform player;
+    public Weapon weapon;
+
+
+    void OnTriggerEnter2D(Collider2D target)
     {
-        
+        if (target.tag == "Player")
+        {
+
+
+            target.GetComponent<Player>().currentWeapon = weapon;
+            target.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSPR;
+            Destroy(gameObject);
+
+        }
+
+
     }
 }
