@@ -4447,6 +4447,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedEnemyAdvanced
       objectReference: {fileID: 0}
+    - target: {fileID: 6421426101058722877, guid: d6dbf606ec6b74a4ab8287821974970c, type: 3}
+      propertyPath: currentState
+      value: 
+      objectReference: {fileID: 11400000, guid: 7dc256749191fea4687585f369de07a9, type: 2}
+    - target: {fileID: 6421426101058722877, guid: d6dbf606ec6b74a4ab8287821974970c, type: 3}
+      propertyPath: remainState
+      value: 
+      objectReference: {fileID: 11400000, guid: 6791030982dfe2545bf15ca308088585, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6dbf606ec6b74a4ab8287821974970c, type: 3}
 --- !u!1001 &6421426099864929379
