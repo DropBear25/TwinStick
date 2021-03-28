@@ -8,7 +8,17 @@ public class StateController : MonoBehaviour
     [SerializeField] private Enemy_State currentState;
     [SerializeField] private Enemy_State  remainState;
 
- 
+    public Transform Target { get; set; }
+
+
+
+
+
+    private void Awake()
+    {
+        
+    }
+
 
     private void Update()
     {
