@@ -21,7 +21,7 @@ public class AmmoSprite : MonoBehaviour
 
         // if statement == gun tag then add bullets 
   //changed from ammotext to weapon script
-        Weapon.ammoAmount += 6;
+        AmmoText.ammoAmount += 6;
         Destroy(gameObject);
 
     }

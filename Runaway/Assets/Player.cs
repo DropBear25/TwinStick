@@ -7,9 +7,8 @@ public class Player : MonoBehaviour
     public Weapon currentWeapon;
     private Rigidbody2D myBody;
     private Animator FireAnim;
-  
 
-   
+  
 
     public float speed;
 
@@ -24,12 +23,18 @@ public class Player : MonoBehaviour
     public ControlJoystick shootJoystick;
 
 
+    //test TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+    [SerializeField]
+  //  private int health;
+
+    private bool hit = true;
+
     
 
     [HideInInspector]
     public bool canShoot;
 
-   // public static int AmmoCapacity { get; internal set; }
+
 
     public void Awake()
     {
@@ -44,9 +49,9 @@ public class Player : MonoBehaviour
     {
         Rotation();
 
-
+        //&& Weapon.ammoAmount > 0
         //shoot function //ammo text changed to weapon 
-        if (Input.GetMouseButton(0) && canShoot && Weapon.ammoAmount > 0) 
+        if (Input.GetMouseButton(0) && canShoot && AmmoText.ammoAmount > 0) 
 
             shoot();
          
@@ -57,13 +62,12 @@ public class Player : MonoBehaviour
     private void shoot()
     {
 
-        if (Time.time >= nextTimeOfFire)
+        if (Time.time >= nextTimeOfFire )
         {       //ammo changed to weapon
-            Weapon.ammoAmount -= 1;
+            AmmoText.ammoAmount -= 1;
             currentWeapon.Shoot();
             nextTimeOfFire = Time.time + 1 / currentWeapon.fireRate;
-
-
+          //  ammoSlot.ReduceCurrentAmmo();
         }
     }
 
@@ -108,4 +112,32 @@ public class Player : MonoBehaviour
         else
             FireAnim.SetBool("Fire", true);
     }
+
+
+
+    //test 
+
+        IEnumerator HitBoxOff()
+    {
+        hit = false;
+        yield return new WaitForSeconds(1.5f);
+        hit = true;
+
+    }
+
+     void OnTriggerEnter2D(Collider2D target)
+    {
+        if(target.tag == "Enemy")
+        {
+            if (hit)
+            {
+                StartCoroutine(HitBoxOff());
+           //     health--;
+            }
+           
+        }
+    }
+
+
+
 }

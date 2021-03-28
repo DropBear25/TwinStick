@@ -12,9 +12,10 @@ public class Weapon : ScriptableObject
     public GameObject bulletPrefab;
     public float fireRate = 1;
     public int damage = 20;
+    public int ammoAmount = 10;
 
-    Text text;
-    public static int ammoAmount = 5;
+
+   
 
     //test 
     // readonly Text text;
@@ -34,14 +35,7 @@ public class Weapon : ScriptableObject
         
     }
 
-    public void AmmoDisplay()
-    {
-        if (ammoAmount > 0)
-            text.text = "Ammo " + ammoAmount;
-        else
-            text.text = "Out of Ammo!";
-
-    }
+ 
 
 
 
