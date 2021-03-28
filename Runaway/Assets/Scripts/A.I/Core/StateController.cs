@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateController : MonoBehaviour
 {
-    [Header("State")]
+      [Header("State")]
     [SerializeField] private Enemy_State currentState;
     [SerializeField] private Enemy_State  remainState;
 
