@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Action : MonoBehaviour
+public abstract class Enemy_Action : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract void Act(StateController controller);
+
+
+
+
+
+
+
 }

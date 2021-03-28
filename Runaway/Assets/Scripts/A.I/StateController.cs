@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class StateController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("State")]
+    [SerializeField] private Enemy_State currentState;
+    [SerializeField] private Enemy_State  remainState;
+
+ 
+
+    private void Update()
     {
-        
+        currentState.EvaluateState(this);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void TransitionToState(Enemy_State nextState)
     {
-        
+        if (nextState != remainState)
+        {
+            currentState = nextState;
+        }
     }
+
 }
