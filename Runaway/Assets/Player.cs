@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     //test TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
     [SerializeField]
-  //  private int health;
+    public int health;
 
     private bool hit = true;
 
@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         Movement(); 
         
     }
@@ -132,12 +133,37 @@ public class Player : MonoBehaviour
             if (hit)
             {
                 StartCoroutine(HitBoxOff());
-           //     health--;
+
+                Destroy(GameObject.Find("PlayerHealthBar").transform.GetChild(0).gameObject);
+                if (health < 1)
+                {
+                   // StartCoroutine(Death());
+                }
             }
            
         }
+       
     }
 
+    public void Heal(int healAmount)
+    {
+        if(health + healAmount > 5)
+        {
+            health = 5;
+        }
+        else
+        {
+            health += healAmount;
+        }
 
+        
+    }
+
+  //  IEnumerator Death()
+ //   {
+ //       SoundManager.instance.PlaySoundFX(deathClip);
+ //       yield return new WaitForSeconds(2);
+  //      SceneManager.LoadScene(SceneManager.GetActiveScene().BuildIndex);
+ //   }
 
 }

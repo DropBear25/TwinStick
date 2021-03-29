@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private float speed = 5;
-    public int timeToLive = 5;
+    //public int timeToLive = 5;
     private Vector2 dir;
 
 
@@ -27,8 +27,8 @@ public class Bullet : MonoBehaviour
     }
 
   
-    IEnumerator DestroyBullet() // 1hour30Doom MICHELLE Talk about this
-    {
-        yield return new WaitForSeconds(timeToLive);
-    }
+   // IEnumerator DestroyBullet() // 1hour30Doom MICHELLE Talk about this
+  //  {
+      //  yield return new WaitForSeconds(timeToLive);
+ //   }
 }
