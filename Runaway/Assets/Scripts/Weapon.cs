@@ -14,8 +14,7 @@ public class Weapon : ScriptableObject
     public int damage = 20;
     public int ammoAmount = 10;
 
-
-   
+    public SimplePool Pooler { get; set; }
 
     //test 
     // readonly Text text;
@@ -24,18 +23,36 @@ public class Weapon : ScriptableObject
     // public Text ammoAmount = 100;
 
 
-   
+
 
     public void Shoot()
     {
-        
-        GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
-        //muzzleflash 
 
-        
+   
+         
+
+
+        // GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
+        //  this.bulletPrefab.SetActive(true);
+
+
+
+
+
+         GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
+      //  bullet.SetActive(true);
+        //muzzleflash 
+        //   
+
+
+
+
     }
 
- 
+    private void SpawnBullet(Vector2 spawnPosition)
+    {
+
+    }
 
 
 
