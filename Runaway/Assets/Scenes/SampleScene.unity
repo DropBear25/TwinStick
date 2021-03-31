@@ -2050,6 +2050,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952505246}
   m_CullTransparentMesh: 0
+--- !u!1 &980522301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3194601510190821984, guid: 1b3b3c9f42d04b440975ae3365b43972, type: 3}
+  m_PrefabInstance: {fileID: 3194601509405941386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &980522303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980522301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a7a82726d5f044b9bffb4d6fcc165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 4243964516149745509, guid: 5e557fe313239404dbe800f76a71dc53, type: 3}
+  poolSize: 100
+  poolCanExpand: 1
 --- !u!1 &1007057966
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,9 +3394,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1452007669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645de212374ba394fb970e4036290a92, type: 3}
+  m_Script: {fileID: 11500000, guid: 09a7a82726d5f044b9bffb4d6fcc165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 3283276857113560056, guid: 6a1edfced0e0bae45ab5056410e31546, type: 3}
+  poolSize: 10
+  poolCanExpand: 1
 --- !u!114 &1452007674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5908,4 +5931,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5763612317750101733, guid: b582f0fe5b6bdff41b5252270d10b1fe, type: 3}
+    - {fileID: -4722340669986571817, guid: b582f0fe5b6bdff41b5252270d10b1fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b582f0fe5b6bdff41b5252270d10b1fe, type: 3}

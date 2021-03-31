@@ -9,8 +9,7 @@ public class Bullet : MonoBehaviour
     //public int timeToLive = 5;
     private Vector2 dir;
 
-    private TestPool pool;
-
+   
 
 
 
@@ -25,30 +24,13 @@ public class Bullet : MonoBehaviour
         transform.position = GameObject.Find("FirePoint").transform.position;
 
        
-        // Destroy(gameObject, 10f); //test below 
+         Destroy(gameObject, 3f); 
 
         transform.eulerAngles = new Vector3(0, 0, GameObject.Find("Player").transform.eulerAngles.z);
 
 
     }
 
-
-    private void OnEnable()
-    {
-        Invoke("hideBullet", 2.0f);
-    }
-
-
-    void hideBullet()
-    {
-        gameObject.SetActive(false);
-    }
-
-
-    private void OnDisable()
-    {
-        CancelInvoke();
-    }
 
 
 
