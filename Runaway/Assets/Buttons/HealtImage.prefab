@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8155259682026683913}
   - component: {fileID: 5575772706150247974}
   - component: {fileID: 2054045615908837511}
-  - component: {fileID: -613377559032145496}
+  - component: {fileID: 8020325999301756149}
   m_Layer: 5
   m_Name: HealtImage
   m_TagString: Untagged
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfde8851dfd008940add5036b2636a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 7625065913418054962, guid: 212bf4d1b27f4b14b9a1058676ea601b, type: 3}
+  item: {fileID: 4253263948435456414, guid: 72666ad276fc42e4191608e89145e127, type: 3}
 --- !u!114 &2054045615908837511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +134,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -613377559032145496}
-        m_TargetAssemblyTypeName: AmmoSprite, Assembly-CSharp
+      - m_Target: {fileID: 8020325999301756149}
+        m_TargetAssemblyTypeName: Heal, Assembly-CSharp
         m_MethodName: Use
         m_Mode: 1
         m_Arguments:
@@ -146,7 +146,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-613377559032145496
+--- !u!114 &8020325999301756149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5548184906474496341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10fe529d8e755694abe1453082541b27, type: 3}
+  m_Script: {fileID: 11500000, guid: b1e04c929d2718a40843cbd12f3354bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 0}
+  healAmount: 1

@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Hearts(health);
+        HealthBar(health);
         Rotation();
 
         //&& Weapon.ammoAmount > 0
@@ -171,6 +171,7 @@ public class Player : MonoBehaviour
                     
                     StartCoroutine(HitBoxOff());
                     health--;
+              //  health = numOfHealth;
                     //    health = numOfHearts;
                   
                     if (health < 1)
@@ -192,7 +193,7 @@ public class Player : MonoBehaviour
    //  SceneManager.LoadScene("GameOver");
    //   }
 
-    void Hearts(int health)
+    void HealthBar(int health)
     {
         for (int i = 0; i < healthbar.Length; i++)
         {
@@ -223,7 +224,7 @@ public class Player : MonoBehaviour
                     health += healAmount;
 
                 }
-                Hearts(health);
+                HealthBar(health);
 
             }
         
