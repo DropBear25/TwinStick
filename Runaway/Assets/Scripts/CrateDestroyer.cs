@@ -23,8 +23,13 @@ public class CrateDestroyer : MonoBehaviour
     {
         if (clicksCountdown < 1)
             CrateDestroy();
+
+
+     
+
     }
 
+    
     private void OnMouseDown()
     {
         anim.SetTrigger("Clicked");

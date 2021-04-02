@@ -34,8 +34,7 @@ public class Weapon : ScriptableObject
         //  this.bulletPrefab.SetActive(true);
 
 
-
-
+       
 
         // GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
         //  bullet.SetActive(true);

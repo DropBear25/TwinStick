@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -25,14 +26,18 @@ public class Player : MonoBehaviour
 
 
     //test TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-    public int numOfHearts;
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
+    //public int numOfHearts;
+    //public Image[] hearts;
+    //public Sprite fullHeart;
+    //public Sprite emptyHeart;
 
 
 
-   
+    public int numOfHealth;
+    public Image[] healthbar;
+    public Sprite fullhealthbar;
+    public Sprite emptyhealthbar;
+
 
 
 
@@ -159,7 +164,7 @@ public class Player : MonoBehaviour
 
         void OnTriggerEnter2D(Collider2D target)
         {
-            if (target.tag == "Enemy" && health > numOfHearts)
+            if (target.tag == "Enemy" && health > numOfHealth)
             {
                 if (hit)
                 {
@@ -167,10 +172,10 @@ public class Player : MonoBehaviour
                     StartCoroutine(HitBoxOff());
                     health--;
                     //    health = numOfHearts;
-                    Destroy(GameObject.Find("PlayerHealthBar").transform.GetChild(0).gameObject);
+                  
                     if (health < 1)
                     {
-                        // StartCoroutine(Death());
+                   //      StartCoroutine(Death());
                     }
                 }
 
@@ -180,27 +185,27 @@ public class Player : MonoBehaviour
 
 
 
-    //  IEnumerator Death()
-    //   {
-    //       SoundManager.instance.PlaySoundFX(deathClip);
-    //       yield return new WaitForSeconds(2);
-    //      SceneManager.LoadScene(SceneManager.GetActiveScene().BuildIndex);
-    //   }
+      //IEnumerator Death()
+     //  {
+        //SoundManager.instance.PlaySoundFX(deathClip);
+  //    yield return new WaitForSeconds(1);
+   //  SceneManager.LoadScene("GameOver");
+   //   }
 
     void Hearts(int health)
     {
-        for (int i = 0; i < hearts.Length; i++)
+        for (int i = 0; i < healthbar.Length; i++)
         {
 
             if (i < health)
             {
 
-                hearts[i].GetComponent<Image>().sprite = fullHeart;
+                healthbar[i].GetComponent<Image>().sprite = fullhealthbar;
 
             }
             else
             {
-                hearts[i].GetComponent<Image>().sprite = emptyHeart;
+                healthbar[i].GetComponent<Image>().sprite = emptyhealthbar;
             }
 
         }

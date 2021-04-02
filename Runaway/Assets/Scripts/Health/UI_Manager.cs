@@ -7,34 +7,34 @@ using TMPro;
 public class UI_Manager : Singleton<UI_Manager>
 {
 
-    [Header("Settings")]
-    [SerializeField] private Image healthBar;
-    [SerializeField] private TextMeshProUGUI currentHealthHealthTMP;
+    //[Header("Settings")]
+    //[SerializeField] private Image healthBar;
+    //[SerializeField] private TextMeshProUGUI currentHealthHealthTMP;
 
 
 
-    private float playerCurrentHealth;
-    private float playerMaxHealth;
+    //private float playerCurrentHealth;
+    //private float playerMaxHealth;
 
 
-    private void Update()
-    {
-        InternalUpdate();
-    }
+    //private void Update()
+    //{
+    //    InternalUpdate();
+    //}
 
 
-    public void UpdateHealth(float currentHealth, float MaxHealth)
-    {
-        playerCurrentHealth = currentHealth;
-        playerMaxHealth = MaxHealth;
-    }
+    //public void UpdateHealth(float currentHealth, float MaxHealth)
+    //{
+    //    playerCurrentHealth = currentHealth;
+    //    playerMaxHealth = MaxHealth;
+    //}
 
-    private void InternalUpdate()
-    {
+    //private void InternalUpdate()
+    //{
 
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, playerCurrentHealth / playerMaxHealth, 10f * Time.deltaTime);
-        currentHealthHealthTMP.text = playerCurrentHealth.ToString() + "/" + playerMaxHealth.ToString();
-    }
+    //    healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, playerCurrentHealth / playerMaxHealth, 10f * Time.deltaTime);
+    //    currentHealthHealthTMP.text = playerCurrentHealth.ToString() + "/" + playerMaxHealth.ToString();
+    //}
 
 
 
