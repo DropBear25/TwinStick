@@ -5,9 +5,9 @@ using UnityEngine;
 public class AmmoSprite : MonoBehaviour
 {
 
-    public Transform player;
-    public GameObject effect;
-    public Weapon currentWeapon;
+    //public Transform player;
+    //public GameObject effect;
+    //public Weapon currentWeapon;
     private void Start()
     {
    //  player = GameObject.FindGameObjectWithTag("RedGun").transform;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65730cec189b6b84c87db4ec68e7755f, type: 3}
   m_Name: BasicWeapon 1
   m_EditorClassIdentifier: 
-  currentWeaponSPR: {fileID: 21300000, guid: 5b7ba0d9d2234364a96c9db530596d61, type: 3}
+  currentWeaponSPR: {fileID: -1768044199346558973, guid: 076f582e4f9d47540878cd048361a6df, type: 3}
   bulletPrefab: {fileID: 4243964516149745509, guid: 5e557fe313239404dbe800f76a71dc53, type: 3}
   fireRate: 15
   damage: 1
