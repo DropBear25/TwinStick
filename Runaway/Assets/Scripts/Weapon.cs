@@ -27,20 +27,18 @@ public class Weapon : ScriptableObject
 
     public void Shoot()
     {
+        //projectile spawn position
+       // SpawnBullet(bulletSpawnPosition);
 
-   
-         
-
-
-        // GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
         //  this.bulletPrefab.SetActive(true);
 
 
 
 
 
-         GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
-      //  bullet.SetActive(true);
+        // GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
+        //  bullet.SetActive(true);
         //muzzleflash 
         //   
 
@@ -51,7 +49,11 @@ public class Weapon : ScriptableObject
 
     private void SpawnBullet(Vector2 spawnPosition)
     {
+        GameObject bulletPooled = Pooler.GetObjectFromPool();
+        bulletPooled.transform.position = spawnPosition;
+        bulletPooled.SetActive(true);
 
+        Bullet bullet = bulletPooled.GetComponent<Bullet>();
     }
 
 

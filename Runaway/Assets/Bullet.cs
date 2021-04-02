@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
     // changed to Fixed Michelle Teeeeeeeeeeeeeeeeest
     void Update()
     {
-        //objectPooler.SpawnFromPool("Bullet", transform.position, Quaternion.identity);
+       
         transform.position = Vector2.MoveTowards(transform.position, dir, speed * Time.deltaTime);
 
     }

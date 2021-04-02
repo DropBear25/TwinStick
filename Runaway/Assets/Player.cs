@@ -65,6 +65,8 @@ public class Player : MonoBehaviour
         //shoot function //     AmmoText.ammoAmount > 0 changed to currentWeapon.ammoAmount > 0
         if (Input.GetMouseButton(0) && canShoot && AmmoText.ammoAmount > 0)
 
+    
+
             Shoot();
        
 
@@ -82,12 +84,14 @@ public class Player : MonoBehaviour
             currentWeapon.Shoot();
             nextTimeOfFire = Time.time + 1 / currentWeapon.fireRate;
 
-           // GameObject g = bulletPool.GetObject();
-          //  g.transform.position = transform.position;
-          //  g.transform.rotation = transform.rotation;
-          //  g.SetActive(true);
+            
+             
+            // GameObject g = bulletPool.GetObject();
+            //  g.transform.position = transform.position;
+            //  g.transform.rotation = transform.rotation;
+            //  g.SetActive(true);
 
-          //GameObject.Find("FirePoint").transform.position, Quaternion.identity);
+            //GameObject.Find("FirePoint").transform.position, Quaternion.identity);
             //  ammoSlot.ReduceCurrentAmmo();
 
         }
