@@ -171,7 +171,7 @@ public class Player : MonoBehaviour
                     
                     StartCoroutine(HitBoxOff());
                     health--;
-              //  health = numOfHealth;
+            //    health = numOfHealth;
                     //    health = numOfHearts;
                   
                     if (health < 1)

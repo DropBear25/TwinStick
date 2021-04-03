@@ -4,25 +4,37 @@ using UnityEngine;
 
 public class BreakWall : MonoBehaviour
 {
-    private BoxCollider2D boxCollider2D;
 
-
+    [SerializeField]
+    private float wallhealth;
+    private Animator wall_anim;
     void Start()
     {
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        wall_anim = GetComponent<Animator>();
+
     }
-
-
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D target)
     {
-        if(other.tag == "Bullet")
+        if (target.tag == "Bullet")
         {
-            boxCollider2D.enabled = false;
+            wallhealth -= GameObject.Find("Player").GetComponent<Player>().currentWeapon.damage;
+            wall_anim.SetTrigger("Hit");
+            Destroy(target.gameObject);
+            WallDestroy();
 
-            transform.GetChild(0).gameObject.SetActive(true);
-            transform.GetChild(1).gameObject.SetActive(true);
         }
+       void WallDestroy()
+        {
+
+            if (wallhealth < 1)
+            {
+                Destroy(this.gameObject);
+            }
+
+        }
+
     }
 
 
 }
+
