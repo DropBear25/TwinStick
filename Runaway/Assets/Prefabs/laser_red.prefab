@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7029001929485844835}
   - component: {fileID: 7029001929485844844}
   - component: {fileID: 7029001929485844845}
-  - component: {fileID: -4722340669986571817}
+  - component: {fileID: -218171911256447542}
   m_Layer: 0
   m_Name: laser_red
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 5690902896739901825, guid: fe2cfff089713e244936be5983416885, type: 3}
---- !u!114 &-4722340669986571817
+--- !u!114 &-218171911256447542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,9 +133,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7029001929485844832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5114c882008189d4eb3245a5ba60ec6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 09a7a82726d5f044b9bffb4d6fcc165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3283276857113560056, guid: 6a1edfced0e0bae45ab5056410e31546, type: 3}
-  poolSize: 30
-  expandable: 1
+  objectPrefab: {fileID: 3283276857113560056, guid: 6a1edfced0e0bae45ab5056410e31546, type: 3}
+  poolSize: 10
+  poolCanExpand: 1

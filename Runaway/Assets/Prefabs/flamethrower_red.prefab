@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3370624376016417098}
   - component: {fileID: 3370624376016417101}
   - component: {fileID: 3370624376016417100}
+  - component: {fileID: 7005006259494457400}
   m_Layer: 0
   m_Name: flamethrower_red
   m_TagString: Untagged
@@ -122,4 +123,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 313fd5af0b612fe4282b0c4f18d2351d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 0}
+  itemButton: {fileID: 872234267451661731, guid: 3225e4f610d6c6040b69a5d1edb68d3e, type: 3}
+--- !u!114 &7005006259494457400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370624376016417103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a7a82726d5f044b9bffb4d6fcc165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 4243964516149745509, guid: 5e557fe313239404dbe800f76a71dc53, type: 3}
+  poolSize: 10
+  poolCanExpand: 1

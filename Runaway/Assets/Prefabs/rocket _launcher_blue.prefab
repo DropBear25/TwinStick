@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4978324209300136628}
   - component: {fileID: 4978324209300136629}
   - component: {fileID: 4978324209300136626}
+  - component: {fileID: 4103589991011046218}
   m_Layer: 0
   m_Name: rocket _launcher_blue
   m_TagString: Untagged
@@ -123,3 +124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 32890680806508236, guid: 9d79e7f1d28013748bcc281141c0aed6, type: 3}
+--- !u!114 &4103589991011046218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4978324209300136627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a7a82726d5f044b9bffb4d6fcc165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 0}
+  poolSize: 10
+  poolCanExpand: 1

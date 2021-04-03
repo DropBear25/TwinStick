@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2886078932887439510}
   - component: {fileID: 2886078932887439505}
   - component: {fileID: 2886078932887439508}
-  - component: {fileID: 2886078932887439511}
   - component: {fileID: 2886078932887439509}
+  - component: {fileID: -872781897202645152}
   m_Layer: 0
   m_Name: Green_machine_gun
   m_TagString: Untagged
@@ -111,19 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.44, y: 3.59}
   m_EdgeRadius: 0
---- !u!114 &2886078932887439511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2886078932887439504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3c13e395df7b743b2d80c6b9898923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: dd9b6377f52098f4fa22bba39f8b2954, type: 2}
 --- !u!114 &2886078932887439509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4823992279173862580, guid: 730dfeb6517937e4a99daa97e0495234, type: 3}
+--- !u!114 &-872781897202645152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886078932887439504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a7a82726d5f044b9bffb4d6fcc165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 4499131740581562493, guid: caaa1786cc4ea114885ab6372b2694c5, type: 3}
+  poolSize: 10
+  poolCanExpand: 1

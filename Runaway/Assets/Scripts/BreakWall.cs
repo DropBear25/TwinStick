@@ -18,7 +18,7 @@ public class BreakWall : MonoBehaviour
         if (target.tag == "Bullet")
         {
             wallhealth -= GameObject.Find("Player").GetComponent<Player>().currentWeapon.damage;
-            wall_anim.SetTrigger("Hit");
+            wall_anim.SetTrigger("Hit");  
             Destroy(target.gameObject);
             WallDestroy();
 

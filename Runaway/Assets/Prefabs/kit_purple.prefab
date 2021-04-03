@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8150334012345949451}
   - component: {fileID: 8150334012345949448}
   - component: {fileID: 8150334012345949449}
+  - component: {fileID: 6359912429541663124}
   m_Layer: 0
   m_Name: kit_purple
   m_TagString: Untagged
@@ -123,3 +124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 90289021867288061, guid: 2ee2fdd27edaefa4486ed7ae2811e8eb, type: 3}
+--- !u!114 &6359912429541663124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8150334012345949452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a7a82726d5f044b9bffb4d6fcc165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 0}
+  poolSize: 10
+  poolCanExpand: 1
