@@ -136,6 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a7a82726d5f044b9bffb4d6fcc165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
+  objectPrefab: {fileID: 894855328226163549, guid: 7c00c0ee627b1c94bb88deaf98744ebb, type: 3}
   poolSize: 10
   poolCanExpand: 1
