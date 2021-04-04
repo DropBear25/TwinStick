@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Fire", 0f, 0.1f);
+       // InvokeRepeating("Fire", 0f, 0.1f);
      
         dir = GameObject.Find("Dir").transform.position;
         transform.position = GameObject.Find("FirePoint").transform.position;
