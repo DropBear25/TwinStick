@@ -15,13 +15,19 @@ public class TestEnemy : MonoBehaviour
     public GameObject healthBar;
     public float speed;
 
-    private Transform playerPos;
+    public Transform player;
     private Rigidbody2D rb;
 
 
+
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     private void Awake()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+      //  player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
 
         if (EnemyRBs == null)
@@ -45,11 +51,11 @@ public class TestEnemy : MonoBehaviour
     {
 
 
-        if (health < 1)
-            Destroy(gameObject);
+        //if (health < 1)
+        //    Destroy(gameObject);
 
-        if (Vector2.Distance(transform.position, playerPos.position) > 0.3f)
-            transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+        //if (Vector2.Distance(transform.position, player.position) > 0.3f)
+        //    transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
     }
 
     void FixedUpdate()
@@ -67,19 +73,19 @@ public class TestEnemy : MonoBehaviour
             }
         }
     }
-     void OnTriggerEnter2D(Collider2D target)
-    {
-        if (target.tag == "Bullet")
-        {
-            health -= GameObject.Find("Player").GetComponent<Player>().currentWeapon.damage; 
-            Destroy(target.gameObject);
+    // void OnTriggerEnter2D(Collider2D target)
+    //{
+    //    if (target.tag == "Bullet")
+    //    {
+    //        health -= GameObject.Find("Player").GetComponent<Player>().currentWeapon.damage; 
+    //        Destroy(target.gameObject);
 
-            healthBar.transform.localScale = new Vector3(health / 100, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
-        }
+    //        healthBar.transform.localScale = new Vector3(health / 100, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+    //    }
 
        
 
 
-    }
+    //}
 
 }

@@ -37,16 +37,13 @@ public class Spawner : MonoBehaviour
 
 
 
-    [SerializeField] private Collider2D spawnColiider; 
+    [SerializeField] private Collider2D spawnColiider;
 
 
     private void Start()
     {
+      
 
-
-        // player = GameObject.FindGameObjectWithTag("Player").transform;
-           StartCoroutine(StartNextWave(currentSpawnIndex));
-        //_AudioSource.Play();
 
     }
 
@@ -132,12 +129,22 @@ public class Spawner : MonoBehaviour
 
 
 
+   void WaveStart()
+    {
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+      //  StartCoroutine(StartNextWave(currentSpawnIndex));
+        //_AudioSource.Play();
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Player player = collider.GetComponent<Player>();
         if(collider.tag == ("Player"))
         {
+           // player = GameObject.FindGameObjectWithTag("Player").transform;
             StartCoroutine(StartNextWave(currentSpawnIndex));
+            WaveStart();
             Debug.Log("am in the collider");
   
 

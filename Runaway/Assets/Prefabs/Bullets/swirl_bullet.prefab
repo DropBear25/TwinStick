@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 800621943140397704}
   - component: {fileID: 8325452044029908167}
   - component: {fileID: 8244304861110760672}
-  - component: {fileID: 9082193695697414790}
   - component: {fileID: 1055947460572948389}
+  - component: {fileID: -8521790493097113676}
+  - component: {fileID: 5229780784502273273}
   m_Layer: 0
   m_Name: swirl_bullet
-  m_TagString: Bullet
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,18 +102,6 @@ CircleCollider2D:
   m_Offset: {x: 1.088078, y: -0.6165838}
   serializedVersion: 2
   m_Radius: 1.9113469
---- !u!114 &9082193695697414790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8416090446533187487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de1847472007da4b9b7c8e4f820fa33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1055947460572948389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +115,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 2
+--- !u!114 &-8521790493097113676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416090446533187487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4f76a15694887439639577147cac5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &5229780784502273273
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416090446533187487}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
