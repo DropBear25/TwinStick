@@ -10,7 +10,7 @@ public class CrateDestroyer : MonoBehaviour
 
     private Animator anim;
     private int clicksCountdown;
-
+    
 
     void Start()
     {
@@ -22,7 +22,10 @@ public class CrateDestroyer : MonoBehaviour
     void Update()
     {
         if (clicksCountdown < 1)
+        {
             CrateDestroy();
+        }
+
 
 
      

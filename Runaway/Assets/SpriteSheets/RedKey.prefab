@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524133262504284541, guid: a7a0b45db9738f348aadd69de89d4fa1, type: 3}
       propertyPath: m_Name
-      value: RedKey Variant
+      value: RedKey
       objectReference: {fileID: 0}
     - target: {fileID: 5957381931882023772, guid: a7a0b45db9738f348aadd69de89d4fa1, type: 3}
       propertyPath: m_Color.r
@@ -95,6 +95,10 @@ PrefabInstance:
     - target: {fileID: 5957381931882023772, guid: a7a0b45db9738f348aadd69de89d4fa1, type: 3}
       propertyPath: m_Color.b
       value: 0.124955505
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957381931882023772, guid: a7a0b45db9738f348aadd69de89d4fa1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a0b45db9738f348aadd69de89d4fa1, type: 3}

@@ -6,7 +6,7 @@ public class CrateManager : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject crate, pickup, shatteredcrate;
+    public GameObject crate, pickup, shatteredcrate;
 
 
     void Start()

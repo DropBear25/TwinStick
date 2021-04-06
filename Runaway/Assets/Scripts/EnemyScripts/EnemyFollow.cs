@@ -8,9 +8,7 @@ public class EnemyFollow : MonoBehaviour
     private List<Rigidbody2D> EnemyRBs;
 
     private float repelRange = .5f;
-    private float health;
-    public GameObject healthBar;
-
+  
     public float speed;
 
     private Transform playerPos;

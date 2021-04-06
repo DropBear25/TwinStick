@@ -7,18 +7,26 @@ public class DoorKeyPad : MonoBehaviour
 
 
     [SerializeField]
-    GameObject codePanel, closedSafe, openSafe;
+  //  GameObject codePanel, closedSafe, openSafe;
+    GameObject codePanel, bossDoor, openDoor;
 
     public static bool isSafeOpened = false;
+    public static bool isBossDoorOpened = false;
 
 
 
 
     void Start()
     {
+        //codePanel.SetActive(false);
+        //closedSafe.SetActive(true);
+        //openSafe.SetActive(false);
+
         codePanel.SetActive(false);
-        closedSafe.SetActive(true);
-        openSafe.SetActive(false);
+        bossDoor.SetActive(true);
+        openDoor.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -26,22 +34,27 @@ public class DoorKeyPad : MonoBehaviour
     {
         if (isSafeOpened)
         {
+            //codePanel.SetActive(false);
+            //closedSafe.SetActive(false);
+            //openSafe.SetActive(true);
+
+
             codePanel.SetActive(false);
-            closedSafe.SetActive(false);
-            openSafe.SetActive(true);
+            bossDoor.SetActive(false);
+            openDoor.SetActive(true);
         }
 
     }
         void OnTriggerEnter2D(Collider2D col)
-        {
-            if(col.gameObject.name.Equals ("Safe") && !isSafeOpened) {
+        {//safe
+            if(col.gameObject.name.Equals ("ControlPanel") && !isBossDoorOpened) {
             codePanel.SetActive(true);
             
         }
         }
      void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.name.Equals("Safe"))
+        if(collision.gameObject.name.Equals("ControlPanel"))
         {
             codePanel.SetActive(false);
         }
