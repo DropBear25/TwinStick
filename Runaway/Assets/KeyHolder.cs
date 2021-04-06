@@ -10,16 +10,18 @@ public class KeyHolder : MonoBehaviour
     private List<Key.KeyType> keyList;
 
 
-
-    private void Awake() {
+    private void Awake()
+    {
         keyList = new List<Key.KeyType>();
     }
 
-    public List<Key.KeyType> GetKeyList() {
+
+    public List<Key.KeyType> GetKeyList()
+    {
         return keyList;
     }
-    public void Addkey(Key.KeyType keyType){
-        Debug.Log("Added Key" + keyType);
+    public void Addkey(Key.KeyType keyType)
+    {
         keyList.Add(keyType);
         OnKeysChanged?.Invoke(this, EventArgs.Empty);
     }
@@ -34,7 +36,10 @@ public class KeyHolder : MonoBehaviour
     {
         return keyList.Contains(keyType);
     }
-    void OnTriggerEnter2D(Collider2D other){
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         Key key = other.GetComponent<Key>();
         if (key != null)
         {

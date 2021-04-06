@@ -18,17 +18,17 @@ public class UI_Keyholder : MonoBehaviour
     private void Awake()
     {
         container = transform.Find("container");
-        keyTemplate = transform.Find("keyTemplate");
+        keyTemplate = container.Find("keyTemplate");
         keyTemplate.gameObject.SetActive(false);
     }
 
+
     private void Start()
     {
-        keyHolder.OnKeysChanged += keyHolder_OnKeysChanged;
+        keyHolder.OnKeysChanged += KeyHolder_OnKeysChanged;
     }
 
-
-    private void keyHolder_OnKeysChanged(object sender, System.EventArgs e){
+    private void KeyHolder_OnKeysChanged(object sender, System.EventArgs e){
 
         UpdateVisual();  
         
@@ -49,11 +49,10 @@ public class UI_Keyholder : MonoBehaviour
             keyTemplate.gameObject.SetActive(true);
             keyTransform.GetComponent<RectTransform>().anchoredPosition = new Vector2(50 * i, 0);
             Image KeyImage = keyTransform.Find("image").GetComponent<Image>(); 
-            switch (keyType)
-            {
+            switch (keyType){
                 default:
-                case Key.KeyType.Red:KeyImage.color = Color.red;        break;
-                case Key.KeyType.Green :KeyImage.color = Color.green;   break;
+                case Key.KeyType.Red: KeyImage.color = Color.red;       break;
+                case Key.KeyType.Green: KeyImage.color = Color.green;   break;
                 case Key.KeyType.Blue :KeyImage.color = Color.blue;     break;
             }
         }
