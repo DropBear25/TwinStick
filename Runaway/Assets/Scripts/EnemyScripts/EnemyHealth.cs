@@ -12,9 +12,20 @@ public class EnemyHealth : MonoBehaviour
     public int healthPickupChance;
     public GameObject healthPickup;
 
+    //test
+    [HideInInspector]
+    public Transform player;
+
+
+    
+
+
+
+
+
     void Update()
     {
-        if (health < 1) {
+        if (health < 0) {
             int randomHealth = Random.Range(0, 101);
             if (randomHealth < healthPickupChance)
             {

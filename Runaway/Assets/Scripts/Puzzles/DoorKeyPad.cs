@@ -10,7 +10,7 @@ public class DoorKeyPad : MonoBehaviour
   //  GameObject codePanel, closedSafe, openSafe;
     GameObject codePanel, bossDoor, openDoor;
 
-    public static bool isSafeOpened = false;
+   // public static bool isSafeOpened = false;
     public static bool isBossDoorOpened = false;
 
 
@@ -32,7 +32,7 @@ public class DoorKeyPad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isSafeOpened)
+        if (isBossDoorOpened)
         {
             //codePanel.SetActive(false);
             //closedSafe.SetActive(false);

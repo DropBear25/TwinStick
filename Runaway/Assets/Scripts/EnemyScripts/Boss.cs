@@ -67,8 +67,9 @@ public class Boss : MonoBehaviour
             {
                 health -= GameObject.Find("Player").GetComponent<Player>().currentWeapon.damage;
                 Destroy(target.gameObject);
+                 Handheld.Vibrate();
 
-       
+
 
             healthBar.transform.localScale = new Vector3(health / 100, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
           

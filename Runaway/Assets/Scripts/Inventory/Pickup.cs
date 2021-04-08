@@ -17,6 +17,8 @@ public class Pickup : MonoBehaviour
     public void Addkey(Key.KeyType keyType)
     {
         keyList.Add(keyType);
+        Handheld.Vibrate();
+        
     }
 
     public bool Containskey(Key.KeyType keyType)
@@ -40,6 +42,7 @@ public class Pickup : MonoBehaviour
                 {
                     //add item
                     inventory.isFull[i] = true;
+                    Handheld.Vibrate();
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject);
                     break;

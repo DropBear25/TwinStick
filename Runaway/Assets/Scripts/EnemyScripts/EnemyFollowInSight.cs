@@ -7,10 +7,10 @@ public class EnemyFollowInSight : MonoBehaviour
 {
 
 
-    public float speed;
+    public int speed;
     public float lineOfSite; 
     public Transform player;
-    private Animator move;
+    private Animator anim;
 
 
 
@@ -19,7 +19,7 @@ public class EnemyFollowInSight : MonoBehaviour
         //   move.SetBool("Moving", false);
      
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        move = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
   
@@ -29,20 +29,25 @@ public class EnemyFollowInSight : MonoBehaviour
     {
         //move.SetBool("move", false);
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-       
-        if (distanceFromPlayer < lineOfSite)
+        if (distanceFromPlayer > lineOfSite)
         {
+            anim.SetBool("move", false);
+        }
+
+       else if (distanceFromPlayer < lineOfSite)
+        {
+            anim.SetBool("move", true);
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-            move.SetBool("move", true);
+           
+
         }
-        else
-        {
-            move.SetBool("move", false);
-        }
+       
        
     }
 
-    private void OnDrawGizmosSelected()
+   
+
+        private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lineOfSite);

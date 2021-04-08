@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 375663788155817125}
   - component: {fileID: 375663788155817120}
   - component: {fileID: 375663788155817144}
+  - component: {fileID: 7361106569440374262}
   m_Layer: 0
   m_Name: Swimmer
   m_TagString: Enemy
@@ -217,6 +218,7 @@ MonoBehaviour:
   healthBar: {fileID: 375663788794260794}
   healthPickupChance: 5
   healthPickup: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &375663788155817120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +252,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7361106569440374262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375663788155817147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b701692992f2ea46a780e1f04af7a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 375663788155817147}
 --- !u!1 &375663788487023568
 GameObject:
   m_ObjectHideFlags: 0
