@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D myBody;
     private Animator FireAnim;
 
-
+  
 
     public float speed;
 
@@ -50,7 +50,8 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool canShoot;
 
-  
+
+ 
 
     public void Awake()
     { 
@@ -104,16 +105,6 @@ public class Player : MonoBehaviour
       
 
         }
-
-
-
-    
-
-        void Start()
-        {
-       
-    }
-
         // Update is called once per frame
         void FixedUpdate()
         {

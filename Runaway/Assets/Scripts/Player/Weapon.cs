@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName ="New Weapon", menuName ="Weapon")]
 public class Weapon : ScriptableObject
 {
+  
     internal static int currentWeapon;
     public Sprite currentWeaponSPR;
 
@@ -29,7 +30,7 @@ public class Weapon : ScriptableObject
     {
         //projectile spawn position
        // SpawnBullet(bulletSpawnPosition);
-
+  
         GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
         //  this.bulletPrefab.SetActive(true);
 

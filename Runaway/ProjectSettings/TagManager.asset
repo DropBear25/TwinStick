@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - PatrolPoints
+  - ScreenShake
   layers:
   - Default
   - TransparentFX

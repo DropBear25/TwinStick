@@ -7,10 +7,9 @@ public class DoorKeyPad : MonoBehaviour
 
 
     [SerializeField]
-  //  GameObject codePanel, closedSafe, openSafe;
     GameObject codePanel, bossDoor, openDoor;
 
-   // public static bool isSafeOpened = false;
+  
     public static bool isBossDoorOpened = false;
 
 
@@ -18,9 +17,7 @@ public class DoorKeyPad : MonoBehaviour
 
     void Start()
     {
-        //codePanel.SetActive(false);
-        //closedSafe.SetActive(true);
-        //openSafe.SetActive(false);
+
 
         codePanel.SetActive(false);
         bossDoor.SetActive(true);
@@ -29,15 +26,12 @@ public class DoorKeyPad : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         if (isBossDoorOpened)
         {
-            //codePanel.SetActive(false);
-            //closedSafe.SetActive(false);
-            //openSafe.SetActive(true);
-
+     
 
             codePanel.SetActive(false);
             bossDoor.SetActive(false);
@@ -46,7 +40,7 @@ public class DoorKeyPad : MonoBehaviour
 
     }
         void OnTriggerEnter2D(Collider2D col)
-        {//safe
+        {
             if(col.gameObject.name.Equals ("ControlPanel") && !isBossDoorOpened) {
             codePanel.SetActive(true);
             
