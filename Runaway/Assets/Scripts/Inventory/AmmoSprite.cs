@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AmmoSprite : MonoBehaviour
 {
-
+    public AudioClip audioReload;
 
     private void Start()
     {
@@ -17,8 +17,8 @@ public class AmmoSprite : MonoBehaviour
 
     public void Use(){
 
-
-        AmmoText.ammoAmount += 50;
+        SoundManager.instance.PlaySound(audioReload);
+        AmmoText.ammoAmount += 60;
         Destroy(gameObject);
 
     }

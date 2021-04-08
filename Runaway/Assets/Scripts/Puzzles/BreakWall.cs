@@ -8,6 +8,9 @@ public class BreakWall : MonoBehaviour
     [SerializeField]
     private float wallhealth;
     private Animator wall_anim;
+    public AudioClip wallbreak;
+
+
     void Start()
     {
         wall_anim = GetComponent<Animator>();
@@ -29,6 +32,7 @@ public class BreakWall : MonoBehaviour
             if (wallhealth < 1)
             {
                 Destroy(this.gameObject);
+                SoundManager.instance.PlaySound(wallbreak);
             }
 
         }

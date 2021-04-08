@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1262500100306032337, guid: 75caf7c8790c786428de270495c3846b, type: 3}
+  itemAudio: {fileID: 8300000, guid: 46b59a9a8bff519409a892aa4fd5e568, type: 3}
 --- !u!61 &5885855998870328712
 BoxCollider2D:
   m_ObjectHideFlags: 0

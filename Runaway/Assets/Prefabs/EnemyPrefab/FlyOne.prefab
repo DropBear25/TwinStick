@@ -254,8 +254,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   healthBar: {fileID: 2587525265284232915}
+  enemyDeathClip: {fileID: 8300000, guid: 00eeb5c27c0029143b1a1adae5249c28, type: 3}
   healthPickupChance: 3
   healthPickup: {fileID: 4253263948435456414, guid: 72666ad276fc42e4191608e89145e127, type: 3}
+  player: {fileID: 0}
 --- !u!61 &2587525264535453034
 BoxCollider2D:
   m_ObjectHideFlags: 0

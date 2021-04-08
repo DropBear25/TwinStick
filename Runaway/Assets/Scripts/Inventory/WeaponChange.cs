@@ -7,6 +7,7 @@ public class WeaponChange : MonoBehaviour
 
     private Transform player;
     public Weapon weapon;
+    public AudioClip audioWeaponChange;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class WeaponChange : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         player.GetComponent<Player>().currentWeapon = weapon;
         player.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSPR;
+        SoundManager.instance.PlaySound(audioWeaponChange);
         Destroy(gameObject);
 
 

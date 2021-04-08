@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public Weapon currentWeapon;
     private Rigidbody2D myBody;
     private Animator FireAnim;
-
+    public AudioClip hitClip, playerDeathClip;
   
 
     public float speed;
@@ -25,15 +25,12 @@ public class Player : MonoBehaviour
     public ControlJoystick shootJoystick;
 
 
-    //test TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-    //public int numOfHearts;
-    //public Image[] hearts;
-    //public Sprite fullHeart;
-    //public Sprite emptyHeart;
+  
 
 
-
+        [HideInInspector]
     public int numOfHealth;
+
     public Image[] healthbar;
     public Sprite fullhealthbar;
     public Sprite emptyhealthbar;
@@ -82,10 +79,9 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        //CHANGED AMMOTEXT.ammoAmount -= 1; TO currentWeapon.ammoAmount -= 1;
+      
         if (Time.time >= nextTimeOfFire)
-        {       //ammo changed to weapon //Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest
-            //SpawnBullet();
+        {   
             AmmoText.ammoAmount -= 1;
             currentWeapon.Shoot();
             nextTimeOfFire = Time.time + 1 / currentWeapon.fireRate;
@@ -159,7 +155,7 @@ public class Player : MonoBehaviour
             {
                 if (hit)
                 {
-                    
+                SoundManager.instance.PlaySound(hitClip);
                     StartCoroutine(HitBoxOff());
                     health--;
             //    health = numOfHealth;
@@ -167,7 +163,8 @@ public class Player : MonoBehaviour
                   
                     if (health < 1)
                     {
-                   //      StartCoroutine(Death());
+                      StartCoroutine(Death());
+                    SoundManager.instance.PlaySound(playerDeathClip);
                     }
                 }
 
@@ -177,12 +174,12 @@ public class Player : MonoBehaviour
 
 
 
-      //IEnumerator Death()
-     //  {
-        //SoundManager.instance.PlaySoundFX(deathClip);
-  //    yield return new WaitForSeconds(1);
-   //  SceneManager.LoadScene("GameOver");
-   //   }
+      IEnumerator Death()
+      {
+       SoundManager.instance.PlaySound(playerDeathClip);
+     yield return new WaitForSeconds(1);
+    SceneManager.LoadScene("GameOver");
+     }
 
     void HealthBar(int health)
     {

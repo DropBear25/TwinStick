@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName ="New Weapon", menuName ="Weapon")]
+[CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon")]
 public class Weapon : ScriptableObject
 {
-  
+
     internal static int currentWeapon;
     public Sprite currentWeaponSPR;
 
@@ -15,7 +15,13 @@ public class Weapon : ScriptableObject
     public int damage = 20;
     public int ammoAmount = 10;
 
-    public SimplePool Pooler { get; set; }
+    public AudioClip[] shootClips;
+
+
+
+
+
+
 
     //test 
     // readonly Text text;
@@ -29,13 +35,14 @@ public class Weapon : ScriptableObject
     public void Shoot()
     {
         //projectile spawn position
-       // SpawnBullet(bulletSpawnPosition);
-  
+        // SpawnBullet(bulletSpawnPosition);
+
         GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
+        SoundManager.instance.PlaySound(shootClips[Random.Range(0, shootClips.Length)]);
         //  this.bulletPrefab.SetActive(true);
 
 
-       
+
 
         // GameObject bullet = Instantiate(bulletPrefab, GameObject.Find("FirePoint").transform.position, Quaternion.identity);
         //  bullet.SetActive(true);
@@ -46,16 +53,5 @@ public class Weapon : ScriptableObject
 
 
     }
-
-    private void SpawnBullet(Vector2 spawnPosition)
-    {
-        GameObject bulletPooled = Pooler.GetObjectFromPool();
-        bulletPooled.transform.position = spawnPosition;
-        bulletPooled.SetActive(true);
-
-        Bullet bullet = bulletPooled.GetComponent<Bullet>();
-    }
-
-
 
 }

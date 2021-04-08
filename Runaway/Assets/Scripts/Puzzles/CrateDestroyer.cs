@@ -10,6 +10,7 @@ public class CrateDestroyer : MonoBehaviour
 
     private Animator anim;
     private int clicksCountdown;
+    public AudioClip boxDestroy;
     
 
     void Start()
@@ -23,6 +24,7 @@ public class CrateDestroyer : MonoBehaviour
     {
         if (clicksCountdown < 1)
         {
+            SoundManager.instance.PlaySound(boxDestroy);
             CrateDestroy();
         }
 

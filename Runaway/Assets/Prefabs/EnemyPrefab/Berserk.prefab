@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 137530630930515769}
   - component: {fileID: 137530630930515768}
   m_Layer: 10
-  m_Name: BerserkTest
+  m_Name: Berserk
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,8 +295,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   healthBar: {fileID: 137530631064040616}
+  enemyDeathClip: {fileID: 8300000, guid: 00eeb5c27c0029143b1a1adae5249c28, type: 3}
   healthPickupChance: 10
   healthPickup: {fileID: 2886078932887439504, guid: fc08e6c8ad93b294b95c309e3d8d44d3, type: 3}
+  player: {fileID: 0}
 --- !u!1 &137530631050685738
 GameObject:
   m_ObjectHideFlags: 0

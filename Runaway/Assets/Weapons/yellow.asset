@@ -17,3 +17,5 @@ MonoBehaviour:
   fireRate: 10
   damage: 3
   ammoAmount: 10
+  shootClips:
+  - {fileID: 8300000, guid: 6aeab4626b35f0f4880ac158d0b1aafa, type: 3}

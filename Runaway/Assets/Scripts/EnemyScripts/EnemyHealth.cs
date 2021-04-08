@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
     private float health;
     public GameObject healthBar;
 
-    //   public AudioClip audioClip;
+     public AudioClip enemyDeathClip;
     public int healthPickupChance;
     public GameObject healthPickup;
 
@@ -18,8 +18,7 @@ public class EnemyHealth : MonoBehaviour
 
 
     private Shake shake;
-    public GameObject effect;
-
+   
 
     private void Start()
     {
@@ -41,7 +40,7 @@ public class EnemyHealth : MonoBehaviour
 
 
             Destroy(this.gameObject);
-            //SoundManager.instance.PlaySound(deathClip);
+           SoundManager.instance.PlaySound(enemyDeathClip);
         }
 
     }
@@ -58,7 +57,7 @@ public class EnemyHealth : MonoBehaviour
 
                 healthBar.transform.localScale = new Vector3(health / 100, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
                 shake.CamShake();
-               // Instantiate(effect, transform.position, Quaternion.identity);
+           
 
 
 

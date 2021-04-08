@@ -8,7 +8,7 @@ public class DoorKeyPad : MonoBehaviour
 
     [SerializeField]
     GameObject codePanel, bossDoor, openDoor;
-
+    public AudioClip doorOpen;
   
     public static bool isBossDoorOpened = false;
 
@@ -51,6 +51,7 @@ public class DoorKeyPad : MonoBehaviour
         if(collision.gameObject.name.Equals("ControlPanel"))
         {
             codePanel.SetActive(false);
+            SoundManager.instance.PlaySound(doorOpen);
         }
     }
 }

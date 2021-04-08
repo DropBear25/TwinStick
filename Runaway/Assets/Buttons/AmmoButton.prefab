@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10fe529d8e755694abe1453082541b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioReload: {fileID: 8300000, guid: fd1d26ff320bd9841ad78f2ab6fb679f, type: 3}
 --- !u!114 &8027340979865299389
 MonoBehaviour:
   m_ObjectHideFlags: 0

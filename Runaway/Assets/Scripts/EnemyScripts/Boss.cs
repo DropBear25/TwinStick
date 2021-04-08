@@ -7,10 +7,11 @@ public class Boss : MonoBehaviour
 {
     public float health;
     public GameObject healthBar;
-    public EnemyHealth[] enemies;
 
 
-    public float spawnOffset;
+    public int healthPickupChance;
+    public GameObject healthPickup;
+    public AudioClip enemyDeathClip;
 
     private float halfHealth;
     private Animator anim;
@@ -38,11 +39,15 @@ public class Boss : MonoBehaviour
         if (health < 1)
         {
 
-           
+            if (health < healthPickupChance)
+            {
+
+                Instantiate(healthPickup, transform.position, transform.rotation);
+            }
 
 
             Destroy(this.gameObject);
-            //SoundManager.instance.PlaySound(deathClip);
+            SoundManager.instance.PlaySound(enemyDeathClip);
         }
 
 
@@ -52,8 +57,8 @@ public class Boss : MonoBehaviour
         }
 
 
-        EnemyHealth randomEnemy = enemies[UnityEngine.Random.Range(0, enemies.Length)];
-        Instantiate(randomEnemy, transform.position + new Vector3(spawnOffset, spawnOffset, 0), transform.rotation);
+        //EnemyHealth randomEnemy = enemies[UnityEngine.Random.Range(0, enemies.Length)];
+        //Instantiate(randomEnemy, transform.position + new Vector3(spawnOffset, spawnOffset, 0), transform.rotation);
 
 
     }
@@ -74,8 +79,7 @@ public class Boss : MonoBehaviour
             healthBar.transform.localScale = new Vector3(health / 100, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
           
             EnemyBoss();
-           // EnemyHealth randomEnemy = enemies[UnityEngine.Random.Range(0, enemies.Length)];
-          //  Instantiate(randomEnemy, transform.position + new Vector3(spawnOffset, spawnOffset, 0), transform.rotation);
+          
 
         }
       

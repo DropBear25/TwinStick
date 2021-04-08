@@ -295,13 +295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390b11b1220082043bd82e3a12156902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  healthBar: {fileID: 0}
-  healthPickupChance: 0
-  healthPickup: {fileID: 0}
-  player: {fileID: 0}
   speed: 4
   lineOfSite: 2.41
+  player: {fileID: 0}
 --- !u!114 &1383012859610965095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   healthBar: {fileID: 1383012859460064336}
+  enemyDeathClip: {fileID: 8300000, guid: 00eeb5c27c0029143b1a1adae5249c28, type: 3}
   healthPickupChance: 50
   healthPickup: {fileID: 8014596217398025156, guid: f5534f119f56a92489cbd4156cca914b, type: 3}
   player: {fileID: 0}

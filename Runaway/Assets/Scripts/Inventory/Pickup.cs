@@ -9,6 +9,7 @@ public class Pickup : MonoBehaviour
 
     private Inventory inventory;
     public GameObject itemButton;
+    public AudioClip itemAudio;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class Pickup : MonoBehaviour
     {
         keyList.Add(keyType);
         Handheld.Vibrate();
-        
+     
     }
 
     public bool Containskey(Key.KeyType keyType)
@@ -43,6 +44,7 @@ public class Pickup : MonoBehaviour
                     //add item
                     inventory.isFull[i] = true;
                     Handheld.Vibrate();
+                    SoundManager.instance.PlaySound(itemAudio);
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject);
                     break;

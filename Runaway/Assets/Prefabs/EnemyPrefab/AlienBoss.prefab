@@ -674,8 +674,8 @@ MonoBehaviour:
   health: 26
   healthBar: {fileID: 7438159739574641585}
   enemies:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2587525264535453037, guid: dfaddf8d58183524b99348f96f6b2fea, type: 3}
+  - {fileID: 2587525264535453037, guid: dfaddf8d58183524b99348f96f6b2fea, type: 3}
   spawnOffset: 4
 --- !u!1 &7438159740356046109
 GameObject:

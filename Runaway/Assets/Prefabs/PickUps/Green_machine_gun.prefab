@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4823992279173862580, guid: 730dfeb6517937e4a99daa97e0495234, type: 3}
+  keyAudio: {fileID: 8300000, guid: de4708dc0cf6458428d4ae7322448b8a, type: 3}
+  itemAudio: {fileID: 8300000, guid: 46b59a9a8bff519409a892aa4fd5e568, type: 3}
 --- !u!114 &-872781897202645152
 MonoBehaviour:
   m_ObjectHideFlags: 0
