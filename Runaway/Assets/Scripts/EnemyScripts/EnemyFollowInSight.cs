@@ -22,7 +22,7 @@ public class EnemyFollowInSight : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-  
+
 
     // Update is called once per frame
     void Update()
@@ -31,18 +31,19 @@ public class EnemyFollowInSight : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         if (distanceFromPlayer > lineOfSite)
         {
-            anim.SetBool("move", false);
+            anim.SetBool("gallop", false);
+
         }
 
-       else if (distanceFromPlayer < lineOfSite)
+        else if (distanceFromPlayer < lineOfSite)
         {
-            anim.SetBool("move", true);
+            anim.SetBool("gallop", true);
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-           
+
 
         }
-       
-       
+
+
     }
 
    
