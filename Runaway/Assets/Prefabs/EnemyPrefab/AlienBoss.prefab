@@ -671,12 +671,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b7e21a2799a4442b047e73332d53c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 26
+  health: 36
   healthBar: {fileID: 7438159739574641585}
-  enemies:
-  - {fileID: 2587525264535453037, guid: dfaddf8d58183524b99348f96f6b2fea, type: 3}
-  - {fileID: 2587525264535453037, guid: dfaddf8d58183524b99348f96f6b2fea, type: 3}
-  spawnOffset: 4
+  healthPickupChance: 100
+  healthPickup: {fileID: 0}
+  enemyDeathClip: {fileID: 8300000, guid: 00eeb5c27c0029143b1a1adae5249c28, type: 3}
 --- !u!1 &7438159740356046109
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,8 +19,7 @@ public class HealPlayer : MonoBehaviour
     public void Use()
     {
 
-        // if statement == gun tag then add bullets 
-        //changed from ammotext to weapon script
+       
         SoundManager.instance.PlaySound(audioHeal);
         playerHealth.Heal(healAmount);
         Destroy(gameObject);

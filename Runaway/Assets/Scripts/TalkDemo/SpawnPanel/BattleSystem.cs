@@ -41,7 +41,7 @@ public class BattleSystem : MonoBehaviour
 
     private void StartBattle()
     {
-        Debug.Log("StartBattle");
+      
         state = State.Active;
     }
 

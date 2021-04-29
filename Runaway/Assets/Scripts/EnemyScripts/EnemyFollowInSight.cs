@@ -16,7 +16,7 @@ public class EnemyFollowInSight : MonoBehaviour
 
     void Start()
     {
-        //   move.SetBool("Moving", false);
+      
      
         player = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
@@ -24,10 +24,10 @@ public class EnemyFollowInSight : MonoBehaviour
 
 
 
-    // Update is called once per frame
+  
     void Update()
     {
-        //move.SetBool("move", false);
+       
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         if (distanceFromPlayer > lineOfSite)
         {

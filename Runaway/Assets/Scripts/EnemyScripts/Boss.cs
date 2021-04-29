@@ -57,8 +57,7 @@ public class Boss : MonoBehaviour
         }
 
 
-        //EnemyHealth randomEnemy = enemies[UnityEngine.Random.Range(0, enemies.Length)];
-        //Instantiate(randomEnemy, transform.position + new Vector3(spawnOffset, spawnOffset, 0), transform.rotation);
+      
 
 
     }

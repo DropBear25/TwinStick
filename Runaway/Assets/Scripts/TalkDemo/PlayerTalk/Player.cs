@@ -88,20 +88,14 @@ public class Player : MonoBehaviour
 
             
              
-            // GameObject g = bulletPool.GetObject();
-            //  g.transform.position = transform.position;
-            //  g.transform.rotation = transform.rotation;
-            //  g.SetActive(true);
-
-            //GameObject.Find("FirePoint").transform.position, Quaternion.identity);
-            //  ammoSlot.ReduceCurrentAmmo();
+      
 
         }
 
       
 
         }
-        // Update is called once per frame
+    
         void FixedUpdate()
         {
 
@@ -158,8 +152,8 @@ public class Player : MonoBehaviour
                 SoundManager.instance.PlaySound(hitClip);
                     StartCoroutine(HitBoxOff());
                     health--;
-            //    health = numOfHealth;
-                    //    health = numOfHearts;
+       
+
                   
                     if (health < 1)
                     {

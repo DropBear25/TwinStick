@@ -54,6 +54,7 @@ public class Pickup : MonoBehaviour
         Key key = other.GetComponent<Key>();
         if (key != null)
         {
+            
             Addkey(key.GetKeyType());
             Destroy(key.gameObject);
 

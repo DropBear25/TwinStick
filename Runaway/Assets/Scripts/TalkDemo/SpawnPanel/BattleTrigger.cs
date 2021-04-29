@@ -15,7 +15,7 @@ public class BattleTrigger : MonoBehaviour
         Player player = collider.GetComponent<Player>();
         if(player != null)
         {
-            Debug.Log("Am In");
+          
             OnPlayerEnterTrigger?.Invoke(this, EventArgs.Empty);
         }
     }

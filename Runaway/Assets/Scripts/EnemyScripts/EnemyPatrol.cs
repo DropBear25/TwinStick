@@ -18,8 +18,7 @@ public class EnemyPatrol : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
 
-     //   playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-
+   
 
         patrolPoints = GameObject.FindGameObjectsWithTag("PatrolPoints");
         randomPoint = Random.Range(0, patrolPoints.Length);

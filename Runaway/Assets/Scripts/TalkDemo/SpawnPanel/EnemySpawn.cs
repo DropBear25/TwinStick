@@ -26,7 +26,6 @@ public class EnemySpawn : MonoBehaviour
    public void Spawn()
     {
         enemy.SetActive(true);
-        Debug.Log("you can see me?");
         Instantiate(enemy, transform.position, transform.rotation);
        
     }
